@@ -30,6 +30,7 @@ const els = {
 let questions = [];
 let currentIndex = 0;
 let progress = { grades: {}, notes: {}, revealed: {}, reviews: {} };
+let reviewTimer = null;
 
 function loadProgress() {
   try {
@@ -261,7 +262,12 @@ els.reviewButton.addEventListener("click", async () => {
   if (!userAnswer) return;
 
   els.reviewButton.disabled = true;
-  els.reviewButton.textContent = "Reviewing...";
+  const startedAt = Date.now();
+  els.reviewButton.textContent = "Reviewing 0s";
+  reviewTimer = window.setInterval(() => {
+    const seconds = Math.max(1, Math.round((Date.now() - startedAt) / 1000));
+    els.reviewButton.textContent = `Reviewing ${seconds}s`;
+  }, 500);
 
   try {
     const response = await fetch("/api/review", {
@@ -286,6 +292,8 @@ els.reviewButton.addEventListener("click", async () => {
       nextStep: "Check the OpenAI API configuration, then run the review again.",
     };
   } finally {
+    window.clearInterval(reviewTimer);
+    reviewTimer = null;
     saveProgress();
     els.reviewButton.textContent = "Review My Answer";
     render();

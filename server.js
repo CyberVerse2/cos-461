@@ -50,30 +50,16 @@ function readRequestBody(req) {
 function buildReviewInput({ question, modelAnswer, userAnswer }) {
   const systemPrompt = [
     "You are a COS 461 exam answer reviewer.",
-    "Your job is to grade a student's free-form answer against the supplied model answer using semantic understanding.",
-    "Do not grade by keyword overlap. Accept correct paraphrases, equivalent examples, and concise answers that cover the required concepts.",
-    "Do not invent requirements outside the model answer. If the model answer is concise, grade against that concise scope.",
-    "Do not reveal chain-of-thought. Return only the requested structured JSON.",
+    "Grade the student's answer against the model answer semantically, not by keyword overlap.",
+    "Accept correct paraphrases and concise answers.",
+    "Do not invent requirements outside the model answer.",
+    "Return only strict JSON.",
   ].join(" ");
 
   const rubric = [
-    "Scoring rubric:",
-    "90-100 strong: covers the core concepts accurately, with only minor omissions or wording differences.",
-    "70-89 almost: mostly correct, but misses a useful detail, example, contrast, or consequence.",
-    "40-69 needs_work: partially correct, but important concepts are missing, vague, or confused.",
-    "0-39 needs_work: mostly incorrect, irrelevant, empty, or contradicts the model answer.",
-    "",
-    "Verdict mapping:",
-    "strong = score >= 90",
-    "almost = score from 70 to 89",
-    "needs_work = score < 70",
-    "",
-    "Feedback rules:",
-    "Strengths should name what the student got right.",
-    "Gaps should name the highest-value missing or incorrect concepts.",
-    "If the answer is correct but shorter than the model answer, do not penalize missing examples unless the question explicitly asks for examples.",
-    "If the question asks for code or a list and the student omits it, count that as a meaningful gap.",
-    "Keep each feedback item short enough for a study card.",
+    "Rubric: 90-100 strong, 70-89 almost, below 70 needs_work.",
+    "If the question asks for code, examples, lists, or contrasts, grade those requirements.",
+    "Use 1-2 short strengths, 1-2 short gaps, and one next step.",
   ].join("\n");
 
   const userPrompt = [
@@ -98,6 +84,14 @@ function buildReviewInput({ question, modelAnswer, userAnswer }) {
   ];
 }
 
+function fetchWithTimeout(url, options, timeoutMs = 20_000) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+  return fetch(url, { ...options, signal: controller.signal }).finally(() => {
+    clearTimeout(timeout);
+  });
+}
+
 async function reviewAnswer(req, res) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
@@ -120,7 +114,8 @@ async function reviewAnswer(req, res) {
   }
 
   try {
-    const response = await fetch("https://api.openai.com/v1/responses", {
+    const startedAt = Date.now();
+    const response = await fetchWithTimeout("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
         authorization: `Bearer ${apiKey}`,
@@ -129,6 +124,7 @@ async function reviewAnswer(req, res) {
       body: JSON.stringify({
         model: process.env.OPENAI_MODEL || "gpt-4.1-mini",
         input: buildReviewInput({ question, modelAnswer, userAnswer }),
+        max_output_tokens: 260,
         text: {
           format: {
             type: "json_schema",
@@ -179,9 +175,12 @@ async function reviewAnswer(req, res) {
       return;
     }
 
-    sendJson(res, 200, JSON.parse(text));
+    sendJson(res, 200, { ...JSON.parse(text), durationMs: Date.now() - startedAt });
   } catch (error) {
-    sendJson(res, 502, { error: error.message || "OpenAI answer review failed." });
+    const message = error.name === "AbortError"
+      ? "OpenAI review timed out after 20 seconds."
+      : error.message || "OpenAI answer review failed.";
+    sendJson(res, 502, { error: message });
   }
 }
 
