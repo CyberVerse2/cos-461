@@ -1,0 +1,7 @@
+.env
+.venv/
+node_modules/
+.DS_Store
+exam-questions.pdf
+exam-questions.txt
+questions-explicit.json

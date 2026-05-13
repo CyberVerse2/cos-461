@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Programming Languages Exam</p>
+          <h1>Exam Quiz</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="progress-pill" aria-live="polite">
+            <span id="progressText">0 of 0 reviewed</span>
+            <span id="scoreText">0 strong</span>
+          </div>
+          <button class="ghost-button" id="resetButton" type="button">Reset</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="review-panel" aria-label="Question list">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Question Bank</p>
+              <h2 id="questionCount">Loading</h2>
+            </div>
+            <select id="filterSelect" aria-label="Filter questions">
+              <option value="all">All</option>
+              <option value="unseen">Unseen</option>
+              <option value="again">Needs work</option>
+              <option value="strong">Strong</option>
+            </select>
+          </div>
+          <div class="meter" aria-hidden="true">
+            <span id="meterFill"></span>
+          </div>
+          <div class="question-list" id="questionList"></div>
+        </aside>
+
+        <section class="quiz-panel" aria-live="polite">
+          <div class="quiz-meta">
+            <span id="sourceBadge">Question</span>
+            <span id="statusBadge">Unseen</span>
+          </div>
+
+          <article class="prompt-card">
+            <p class="eyebrow">Prompt</p>
+            <h2 id="questionText">Loading question...</h2>
+          </article>
+
+          <div class="recall-box">
+            <label for="notesInput">Your recall notes</label>
+            <textarea id="notesInput" rows="7" placeholder="Type what you remember before revealing the model answer."></textarea>
+          </div>
+
+          <div class="answer-box" id="answerBox" hidden>
+            <p class="eyebrow">Model Answer</p>
+            <div id="answerText"></div>
+          </div>
+
+          <div class="review-box" id="reviewBox" hidden>
+            <div class="review-heading">
+              <div>
+                <p class="eyebrow">AI Review</p>
+                <h3 id="reviewVerdict">Waiting for review</h3>
+              </div>
+              <span id="reviewScore">0%</span>
+            </div>
+            <div class="review-grid">
+              <div>
+                <h4>What works</h4>
+                <ul id="reviewStrengths"></ul>
+              </div>
+              <div>
+                <h4>Gaps</h4>
+                <ul id="reviewGaps"></ul>
+              </div>
+            </div>
+            <p id="reviewNextStep"></p>
+          </div>
+
+          <div class="controls">
+            <button class="secondary-button" id="prevButton" type="button">Previous</button>
+            <button class="primary-button" id="revealButton" type="button">Reveal Answer</button>
+            <button class="secondary-button" id="reviewButton" type="button">Review My Answer</button>
+            <button class="secondary-button" id="nextButton" type="button">Next</button>
+          </div>
+
+          <div class="grade-row" id="gradeRow" hidden>
+            <button class="grade-button" data-grade="again" type="button">Needs work</button>
+            <button class="grade-button" data-grade="ok" type="button">Almost</button>
+            <button class="grade-button" data-grade="strong" type="button">Strong</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

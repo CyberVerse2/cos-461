@@ -1,0 +1,497 @@
+:root {
+  --page: oklch(97.5% 0.008 105);
+  --surface: oklch(99% 0.006 105);
+  --surface-2: oklch(94.5% 0.012 112);
+  --ink: oklch(22% 0.018 130);
+  --muted: oklch(49% 0.025 126);
+  --line: oklch(88% 0.014 112);
+  --accent: oklch(54% 0.115 153);
+  --accent-2: oklch(91% 0.046 150);
+  --warning: oklch(67% 0.13 72);
+  --danger: oklch(58% 0.15 28);
+  --shadow: 0 18px 50px oklch(28% 0.025 130 / 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, oklch(95% 0.018 118), var(--page) 36rem),
+    var(--page);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.topbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1240px;
+  margin: 0 auto 22px;
+}
+
+.topbar h1,
+.panel-header h2,
+.prompt-card h2 {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.topbar h1 {
+  font-size: 2rem;
+  line-height: 1.05;
+}
+
+.eyebrow {
+  margin: 0 0 7px;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-pill {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: oklch(98% 0.008 110 / 0.82);
+  color: var(--muted);
+  font-size: 0.9rem;
+  box-shadow: 0 10px 25px oklch(36% 0.025 126 / 0.08);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 18px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.review-panel,
+.quiz-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.review-panel {
+  align-self: start;
+  overflow: hidden;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px;
+}
+
+.panel-header h2 {
+  font-size: 1.05rem;
+}
+
+select {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0 10px;
+}
+
+.meter {
+  height: 8px;
+  background: var(--surface-2);
+}
+
+.meter span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--accent);
+  transition: width 180ms ease-out;
+}
+
+.question-list {
+  max-height: calc(100vh - 192px);
+  overflow: auto;
+  padding: 8px;
+}
+
+.question-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  padding: 8px 10px;
+}
+
+.question-item:hover,
+.question-item:focus-visible {
+  border-color: var(--line);
+  background: var(--surface-2);
+  outline: none;
+}
+
+.question-item.active {
+  border-color: oklch(75% 0.07 150);
+  background: var(--accent-2);
+}
+
+.q-number {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.q-title {
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.dot.again {
+  background: var(--danger);
+}
+
+.dot.ok {
+  background: var(--warning);
+}
+
+.dot.strong {
+  background: var(--accent);
+}
+
+.quiz-panel {
+  min-height: 680px;
+  padding: 22px;
+}
+
+.quiz-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.quiz-meta span,
+.grade-button {
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--muted);
+  padding: 7px 11px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.prompt-card {
+  padding: 8px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.prompt-card h2 {
+  max-width: 76ch;
+  font-size: 1.65rem;
+  line-height: 1.22;
+}
+
+.recall-box {
+  margin-top: 20px;
+}
+
+.recall-box label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: oklch(98.5% 0.006 105);
+  color: var(--ink);
+  line-height: 1.5;
+  padding: 14px;
+}
+
+textarea:focus {
+  border-color: var(--accent);
+  outline: 3px solid oklch(83% 0.06 150 / 0.55);
+}
+
+.answer-box {
+  max-width: 78ch;
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 8px;
+  background: oklch(95.5% 0.022 112);
+  border: 1px solid oklch(86% 0.022 112);
+}
+
+.answer-box p {
+  margin-top: 0;
+}
+
+#answerText {
+  color: oklch(30% 0.018 130);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+#answerText p {
+  margin: 0 0 12px;
+}
+
+#answerText p:last-child {
+  margin-bottom: 0;
+}
+
+#answerText pre {
+  overflow: auto;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid oklch(82% 0.016 112);
+  border-radius: 7px;
+  background: oklch(91.5% 0.012 112);
+  line-height: 1.45;
+}
+
+#answerText code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92rem;
+}
+
+.review-box {
+  max-width: 78ch;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid oklch(82% 0.034 153);
+  border-radius: 8px;
+  background: oklch(97% 0.018 148);
+}
+
+.review-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.review-heading h3,
+.review-grid h4,
+.review-box p {
+  margin: 0;
+}
+
+.review-heading h3 {
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+#reviewScore {
+  display: grid;
+  place-items: center;
+  min-width: 58px;
+  height: 38px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.review-grid h4 {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.review-grid ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  line-height: 1.5;
+}
+
+#reviewNextStep {
+  margin-top: 16px;
+  color: oklch(31% 0.042 148);
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.controls,
+.grade-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.primary-button,
+.secondary-button,
+.ghost-button {
+  min-height: 42px;
+  border-radius: 7px;
+  padding: 0 15px;
+  font-weight: 800;
+}
+
+.primary-button {
+  border: 1px solid oklch(45% 0.11 153);
+  background: var(--accent);
+  color: oklch(98% 0.008 120);
+}
+
+.secondary-button,
+.ghost-button {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.ghost-button:hover,
+.grade-button:hover {
+  transform: translateY(-1px);
+}
+
+.grade-button.selected {
+  border-color: oklch(45% 0.11 153);
+  background: var(--accent-2);
+  color: oklch(27% 0.05 145);
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    align-items: flex-start;
+    padding: 10px 0;
+    background: oklch(97.5% 0.008 105 / 0.94);
+    backdrop-filter: blur(10px);
+  }
+
+  .topbar,
+  .topbar-actions {
+    flex-direction: column;
+  }
+
+  .topbar-actions,
+  .progress-pill,
+  .workspace {
+    width: 100%;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .question-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-height: 260px;
+  }
+
+  .quiz-panel {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .prompt-card h2 {
+    font-size: 1.28rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .question-list {
+    grid-template-columns: 1fr;
+  }
+
+  .controls > button,
+  .grade-row > button {
+    flex: 1 1 100%;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+}
