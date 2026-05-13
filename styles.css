@@ -256,6 +256,36 @@ select {
   line-height: 1.22;
 }
 
+.prompt-card h2 p {
+  margin: 0 0 12px;
+}
+
+.prompt-card h2 p:last-child {
+  margin-bottom: 0;
+}
+
+.prompt-card pre,
+#answerText pre {
+  overflow: auto;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid oklch(82% 0.016 112);
+  border-radius: 7px;
+  background: oklch(91.5% 0.012 112);
+  line-height: 1.45;
+}
+
+.prompt-card code,
+#answerText code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92rem;
+}
+
+.prompt-card pre {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .recall-box {
   margin-top: 20px;
 }
@@ -309,21 +339,6 @@ textarea:focus {
 
 #answerText p:last-child {
   margin-bottom: 0;
-}
-
-#answerText pre {
-  overflow: auto;
-  margin: 12px 0;
-  padding: 12px;
-  border: 1px solid oklch(82% 0.016 112);
-  border-radius: 7px;
-  background: oklch(91.5% 0.012 112);
-  line-height: 1.45;
-}
-
-#answerText code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.92rem;
 }
 
 .review-box {

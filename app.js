@@ -138,9 +138,9 @@ function renderQuestion() {
 
   els.sourceBadge.textContent = `S${question.section} Q${question.sourceNumber}`;
   els.statusBadge.textContent = gradeLabel(grade);
-  els.questionText.textContent = question.question;
+  renderRichContent(els.questionText, question.prompt || question.question);
   els.notesInput.value = progress.notes[question.id] || "";
-  renderAnswerContent(question.answer);
+  renderRichContent(els.answerText, question.answer);
   els.answerBox.hidden = !revealed;
   els.gradeRow.hidden = !revealed;
   els.revealButton.textContent = revealed ? "Hide Answer" : "Reveal Answer";
@@ -154,23 +154,23 @@ function renderQuestion() {
   });
 }
 
-function renderAnswerContent(answer) {
-  els.answerText.innerHTML = "";
-  const parts = answer.split(/```([a-zA-Z0-9_-]*)\n([\s\S]*?)```/g);
+function renderRichContent(container, content) {
+  container.innerHTML = "";
+  const parts = content.split(/```([a-zA-Z0-9_-]*)\n([\s\S]*?)```/g);
 
   for (let i = 0; i < parts.length; i += 3) {
-    appendAnswerParagraphs(parts[i]);
+    appendRichParagraphs(container, parts[i]);
     if (parts[i + 2] !== undefined) {
       const pre = document.createElement("pre");
       const code = document.createElement("code");
       code.textContent = parts[i + 2].trimEnd();
       pre.append(code);
-      els.answerText.append(pre);
+      container.append(pre);
     }
   }
 }
 
-function appendAnswerParagraphs(text) {
+function appendRichParagraphs(container, text) {
   text
     .split(/\n{2,}/)
     .map((part) => part.trim())
@@ -178,7 +178,7 @@ function appendAnswerParagraphs(text) {
     .forEach((part) => {
       const paragraph = document.createElement("p");
       paragraph.textContent = part.replace(/\n/g, " ");
-      els.answerText.append(paragraph);
+      container.append(paragraph);
     });
 }
 
@@ -275,6 +275,7 @@ els.reviewButton.addEventListener("click", async () => {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         question: question.question,
+        prompt: question.prompt || question.question,
         modelAnswer: question.answer,
         userAnswer,
       }),

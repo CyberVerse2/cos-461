@@ -107,7 +107,7 @@ async function reviewAnswer(req, res) {
     return;
   }
 
-  const { question, modelAnswer, userAnswer } = payload;
+  const { question, prompt, modelAnswer, userAnswer } = payload;
   if (!question || !modelAnswer || !userAnswer || !userAnswer.trim()) {
     sendJson(res, 400, { error: "Question, model answer, and your answer are required." });
     return;
@@ -123,7 +123,7 @@ async function reviewAnswer(req, res) {
       },
       body: JSON.stringify({
         model: process.env.OPENAI_MODEL || "gpt-4.1-mini",
-        input: buildReviewInput({ question, modelAnswer, userAnswer }),
+        input: buildReviewInput({ question: prompt || question, modelAnswer, userAnswer }),
         max_output_tokens: 260,
         text: {
           format: {

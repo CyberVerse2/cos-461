@@ -5,6 +5,7 @@
     "sectionTitle": "Syntax, Semantics, Compilers, Interpreters, Typing, and Scope",
     "sourceNumber": "1",
     "question": "In programming language design, what is the fundamental difference between syntax and semantics? Provide a simple example of a syntax error.",
+    "prompt": "In programming language design, what is the fundamental difference between syntax and semantics? Provide a simple example of a syntax error.",
     "answer": "Syntax refers to the spelling and grammar rules of a programming language. It is about what the code looks like and how symbols are arranged. Semantics refers to the meaning or logic behind the code; it is about what the code actually does when it runs.\n\nExample of a syntax error:\n\n```javascript\nconsole.log(\"Hello\"\n```\n\ninstead of:\n\n```javascript\nconsole.log(\"Hello\");\n```"
   },
   {
@@ -13,6 +14,7 @@
     "sectionTitle": "Syntax, Semantics, Compilers, Interpreters, Typing, and Scope",
     "sourceNumber": "2",
     "question": "Both compilers and interpreters are used to translate human-readable code into machine code, but they do it differently. Explain the main difference in how they operate.",
+    "prompt": "Both compilers and interpreters are used to translate human-readable code into machine code, but they do it differently. Explain the main difference in how they operate.",
     "answer": "A compiler translates the entire source code into an executable machine code file before the program is run. This makes execution fast, but compilation must happen first. An interpreter translates and executes the code line by line while the program is running. This makes testing faster but execution is usually slower."
   },
   {
@@ -21,6 +23,7 @@
     "sectionTitle": "Syntax, Semantics, Compilers, Interpreters, Typing, and Scope",
     "sourceNumber": "3",
     "question": "Explain the difference between a statically typed language and a dynamically typed language. How does this affect the way a developer writes code?",
+    "prompt": "Explain the difference between a statically typed language and a dynamically typed language. How does this affect the way a developer writes code?",
     "answer": "In a statically typed language, such as Java or C, a variable’s type must be declared and checked before execution. In a dynamically typed language, such as Python or JavaScript, the type is determined at runtime. Static typing catches many errors early, while dynamic typing makes writing code faster and more flexible but can cause runtime errors."
   },
   {
@@ -29,6 +32,7 @@
     "sectionTitle": "Syntax, Semantics, Compilers, Interpreters, Typing, and Scope",
     "sourceNumber": "4",
     "question": "What does variable scope mean in programming? Briefly explain the difference between a global variable and a local variable.",
+    "prompt": "What does variable scope mean in programming? Briefly explain the difference between a global variable and a local variable.",
     "answer": "Variable scope is the part of a program where a variable can be accessed or modified. A local variable is declared inside a function or block and can only be used there. A global variable is declared outside functions and can be accessed throughout the program."
   },
   {
@@ -37,6 +41,7 @@
     "sectionTitle": "Syntax, Semantics, Compilers, Interpreters, Typing, and Scope",
     "sourceNumber": "5",
     "question": "Review the Java code snippet. Identify the syntactic error, semantic error, and poor pragmatics.",
+    "prompt": "Review the Java code snippet. Identify the syntactic error, semantic error, and poor pragmatics.\n\n```java\npublic class Calculator {\n    public static void main(String[] args) {\n        int x = 50;\n        int y = \"One Hundred\";\n        int total = x + y\n        System.out.println(total);\n    }\n}\n```",
     "answer": "Line 3 has a syntax error because it is missing a semicolon. Line 2 has a semantic error because it assigns a string to an integer variable. Line 1 shows poor pragmatics because `x` is not a meaningful variable name."
   },
   {
@@ -45,6 +50,7 @@
     "sectionTitle": "Array Errors, ADTs, Maps, Recursion, Structs, and Classes",
     "sourceNumber": "1",
     "question": "How do C, Java, and Python differ in their handling of array out-of-bounds errors?",
+    "prompt": "How do C, Java, and Python differ in their handling of array out-of-bounds errors?",
     "answer": "C gives no warning and may read invalid memory, causing unpredictable behaviour or buffer overflows. Java throws `ArrayIndexOutOfBoundsException`. Python throws `IndexError: list index out of range`."
   },
   {
@@ -53,6 +59,7 @@
     "sectionTitle": "Array Errors, ADTs, Maps, Recursion, Structs, and Classes",
     "sourceNumber": "2",
     "question": "Explain the difference between an Abstract Data Type and a Data Structure.",
+    "prompt": "Explain the difference between an Abstract Data Type and a Data Structure.",
     "answer": "An ADT defines the “what”: the logical behaviour and operations. A data structure defines the “how”: the actual memory implementation."
   },
   {
@@ -61,6 +68,7 @@
     "sectionTitle": "Array Errors, ADTs, Maps, Recursion, Structs, and Classes",
     "sourceNumber": "3",
     "question": "Describe the efficiency of a Map or Dictionary for data retrieval and why it is preferred over a standard list for large datasets.",
+    "prompt": "Describe the efficiency of a Map or Dictionary for data retrieval and why it is preferred over a standard list for large datasets.",
     "answer": "A Map or Dictionary gives average-case `O(1)` lookup through hashing. A list may require `O(n)` search because each element may need to be checked."
   },
   {
@@ -69,6 +77,7 @@
     "sectionTitle": "Array Errors, ADTs, Maps, Recursion, Structs, and Classes",
     "sourceNumber": "4",
     "question": "How does Python’s recursion depth differ from C, and what is Python’s general preference for repetition?",
+    "prompt": "How does Python’s recursion depth differ from C, and what is Python’s general preference for repetition?",
     "answer": "C recursion depth is limited mainly by system memory. Python has a default recursion limit, usually around 1,000 calls, to prevent stack overflow. Python generally favours iteration over deep recursion."
   },
   {
@@ -77,6 +86,7 @@
     "sectionTitle": "Array Errors, ADTs, Maps, Recursion, Structs, and Classes",
     "sourceNumber": "5",
     "question": "Contrast data and behaviour in a C struct versus a Java class.",
+    "prompt": "Contrast data and behaviour in a C struct versus a Java class.",
     "answer": "A C `struct` mainly stores data, while functions that operate on it are separate. A Java class bundles data fields and methods together in one object-oriented unit."
   },
   {
@@ -85,6 +95,7 @@
     "sectionTitle": "Data Structures",
     "sourceNumber": "1",
     "question": "Define a data structure and explain its three key characteristics.",
+    "prompt": "Define a data structure and explain its three key characteristics.",
     "answer": "A data structure is a way of organizing and storing data so it can be accessed and used efficiently. Its key characteristics are organization, storage, and operations. Organization describes how elements are arranged. Storage describes whether data is stored contiguously or non-contiguously. Operations include insertion, deletion, traversal, searching, and sorting."
   },
   {
@@ -93,6 +104,7 @@
     "sectionTitle": "Data Structures",
     "sourceNumber": "2",
     "question": "Differentiate between primitive and non-primitive data structures with examples.",
+    "prompt": "Differentiate between primitive and non-primitive data structures with examples.",
     "answer": "Primitive data structures are basic types directly supported by hardware, such as Integer, Float, Double, Character, and Boolean. Non-primitive data structures are complex structures derived from primitive types, such as Arrays, Linked Lists, Stacks, Queues, Trees, and Graphs."
   },
   {
@@ -101,6 +113,7 @@
     "sectionTitle": "Data Structures",
     "sourceNumber": "3",
     "question": "Explain arrays and state their advantages and disadvantages.",
+    "prompt": "Explain arrays and state their advantages and disadvantages.",
     "answer": "An array is a linear data structure that stores elements of the same type in contiguous memory locations and accesses them using indexes. Advantages include fast indexed access, simplicity, and memory efficiency. Disadvantages include fixed size, costly insertion/deletion, and possible memory wastage."
   },
   {
@@ -109,6 +122,7 @@
     "sectionTitle": "Data Structures",
     "sourceNumber": "4",
     "question": "Compare stack and queue data structures.",
+    "prompt": "Compare stack and queue data structures.",
     "answer": "A stack follows LIFO: Last-In, First-Out. Its operations include push, pop, and peek. A queue follows FIFO: First-In, First-Out. Its operations include enqueue, dequeue, front, and rear. A stack operates from one end, while a queue operates from both front and rear ends."
   },
   {
@@ -117,6 +131,7 @@
     "sectionTitle": "Data Structures",
     "sourceNumber": "5",
     "question": "Differentiate between recursion and iteration using factorial as an example.",
+    "prompt": "Differentiate between recursion and iteration using factorial as an example.",
     "answer": "Iteration uses loops and is usually faster and more memory-efficient. Recursion uses a function that calls itself until a base case is reached. For factorial, recursion expresses `factorial(n) = n * factorial(n - 1)`, with base case `factorial(0) = 1`. Factorial of 5 is `5 × 4 × 3 × 2 × 1 = 120`."
   },
   {
@@ -125,6 +140,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "1a",
     "question": "Define List and Tree.",
+    "prompt": "Define List and Tree.",
     "answer": "A list is a linear data structure where elements are arranged sequentially and each has an index. A tree is a non-linear data structure made of nodes connected hierarchically from a root node."
   },
   {
@@ -133,6 +149,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "1b",
     "question": "State two differences between linear and non-linear data structures.",
+    "prompt": "State two differences between linear and non-linear data structures.",
     "answer": "Linear structures arrange data sequentially; non-linear structures arrange data hierarchically or in branches. In linear structures, elements usually have one predecessor and one successor; in non-linear structures, a node may have multiple relationships."
   },
   {
@@ -141,6 +158,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "2a",
     "question": "What is a data type?",
+    "prompt": "What is a data type?",
     "answer": "A data type is a classification that specifies the kind of value a variable can store and the operations that can be performed on it."
   },
   {
@@ -149,6 +167,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "2b",
     "question": "Explain Domain, Storage Representation, and Type Checking.",
+    "prompt": "Explain Domain, Storage Representation, and Type Checking.",
     "answer": "Domain is the range of values a type can hold. Storage representation is how the data is stored in memory, often binary. Type checking ensures operations are performed on compatible types; it may be static before execution or dynamic during execution."
   },
   {
@@ -157,6 +176,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "3a",
     "question": "Write a Python program showing list creation, insertion, and deletion.",
+    "prompt": "Write a Python program showing list creation, insertion, and deletion.",
     "answer": "```python\nstudents = ['Ngozi', 'Emeka', 'Amara']\nstudents.append('Tunde')\nstudents.remove('Emeka')\nprint(students)\n```"
   },
   {
@@ -165,6 +185,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "3b",
     "question": "What is slicing in Python lists?",
+    "prompt": "What is slicing in Python lists?",
     "answer": "Slicing extracts part of a sequence using `list[start:stop]`. Example:\n\n```python\nnums = [1, 2, 3, 4, 5]\nprint(nums[1:4])  # [2, 3, 4]\n```"
   },
   {
@@ -173,6 +194,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "4a",
     "question": "Define a Binary Search Tree.",
+    "prompt": "Define a Binary Search Tree.",
     "answer": "A BST is a binary tree where each node has at most two children. Values in the left subtree are smaller, and values in the right subtree are larger."
   },
   {
@@ -181,6 +203,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "4b",
     "question": "State BST rules and explain searching.",
+    "prompt": "State BST rules and explain searching.",
     "answer": "Rules: left subtree values are smaller, right subtree values are larger, and duplicates are not allowed. Searching starts at the root; go left if the target is smaller, right if larger, and repeat until found or the node is empty."
   },
   {
@@ -189,6 +212,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "5a",
     "question": "What is recursion?",
+    "prompt": "What is recursion?",
     "answer": "Recursion is when a function calls itself to solve smaller versions of a problem until it reaches a base case."
   },
   {
@@ -197,6 +221,7 @@
     "sectionTitle": "Lists, Trees, Data Types, BST, and Recursion",
     "sourceNumber": "5b",
     "question": "Write a recursive factorial function in Python.",
+    "prompt": "Write a recursive factorial function in Python.",
     "answer": "```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n\nprint(factorial(5))\n```"
   },
   {
@@ -205,6 +230,7 @@
     "sectionTitle": "Control Structures and Data Flow",
     "sourceNumber": "1",
     "question": "Define control structures and explain their role in program execution.",
+    "prompt": "Define control structures and explain their role in program execution.",
     "answer": "Control structures determine the order in which program instructions execute. They direct program flow, enable decision-making, support repetition, improve logical structure, and control how data is processed or skipped."
   },
   {
@@ -213,6 +239,7 @@
     "sectionTitle": "Control Structures and Data Flow",
     "sourceNumber": "2",
     "question": "What is data flow? List and explain the four stages of a data flow model.",
+    "prompt": "What is data flow? List and explain the four stages of a data flow model.",
     "answer": "Data flow is the movement and transformation of data in a program or system. The four stages are input, processing, storage, and output."
   },
   {
@@ -221,6 +248,7 @@
     "sectionTitle": "Control Structures and Data Flow",
     "sourceNumber": "3",
     "question": "Explain Dijkstra’s contribution to structured programming.",
+    "prompt": "Explain Dijkstra’s contribution to structured programming.",
     "answer": "Dijkstra criticized excessive use of `GOTO` in his paper “Go To Statement Considered Harmful.” He argued that `GOTO` produced spaghetti code that was hard to debug and maintain. He promoted structured programming using sequence, selection, and iteration."
   },
   {
@@ -229,6 +257,7 @@
     "sectionTitle": "Control Structures and Data Flow",
     "sourceNumber": "4",
     "question": "Evaluate nested control structures on readability and performance.",
+    "prompt": "Evaluate nested control structures on readability and performance.",
     "answer": "Nested control structures can make code difficult to read, create arrow code, and complicate debugging. Nested loops also increase time complexity, for example one loop may be `O(n)` while two nested loops become `O(n²)`."
   },
   {
@@ -237,6 +266,7 @@
     "sectionTitle": "Control Structures and Data Flow",
     "sourceNumber": "5",
     "question": "Discuss advantages and disadvantages of control structures.",
+    "prompt": "Discuss advantages and disadvantages of control structures.",
     "answer": "Advantages include flexibility, efficiency, readability, error handling, and automation. Disadvantages include complexity, infinite loops, performance overhead, off-by-one errors, and difficulty tracing complex branches."
   },
   {
@@ -245,6 +275,7 @@
     "sectionTitle": "Runtime Execution, JIT, and Memory Management",
     "sourceNumber": "1",
     "question": "What is the difference between compiled and interpreted execution models?",
+    "prompt": "What is the difference between compiled and interpreted execution models?",
     "answer": "Compiled languages translate code into machine instructions before execution, making runtime fast. Interpreted or VM-based languages execute through an intermediary layer, adding overhead but improving flexibility."
   },
   {
@@ -253,6 +284,7 @@
     "sectionTitle": "Runtime Execution, JIT, and Memory Management",
     "sourceNumber": "2",
     "question": "How does JIT compilation improve performance?",
+    "prompt": "How does JIT compilation improve performance?",
     "answer": "JIT compiles frequently used parts of a program during execution and optimizes them based on real usage, making programs faster after warmup."
   },
   {
@@ -261,6 +293,7 @@
     "sectionTitle": "Runtime Execution, JIT, and Memory Management",
     "sourceNumber": "3",
     "question": "What is memory management as a runtime consideration?",
+    "prompt": "What is memory management as a runtime consideration?",
     "answer": "Memory management controls how memory is allocated and freed while a program runs. It helps prevent memory leaks, crashes, and inefficient memory use."
   },
   {
@@ -269,6 +302,7 @@
     "sectionTitle": "Runtime Execution, JIT, and Memory Management",
     "sourceNumber": "4",
     "question": "Give four advantages of considering runtime issues.",
+    "prompt": "Give four advantages of considering runtime issues.",
     "answer": "It improves memory and CPU efficiency, reduces runtime errors, improves performance, and makes programs more stable and reliable."
   },
   {
@@ -277,6 +311,7 @@
     "sectionTitle": "Runtime Execution, JIT, and Memory Management",
     "sourceNumber": "5",
     "question": "Mention four major memory regions in runtime memory layout and what each stores.",
+    "prompt": "Mention four major memory regions in runtime memory layout and what each stores.",
     "answer": "Code/Text stores executable instructions. Static Data stores global and static variables. Stack stores local variables, function parameters, return addresses, and temporary values. Heap stores dynamically allocated objects and data structures."
   },
   {
@@ -285,6 +320,7 @@
     "sectionTitle": "Runtime Memory Layout, Garbage Collection, and Stack Unwinding",
     "sourceNumber": "1",
     "question": "Give components of runtime memory layout and explain stack overflow during recursion.",
+    "prompt": "Give components of runtime memory layout and explain stack overflow during recursion.",
     "answer": "Components are Code/Text Segment, Data Segment, Stack, and Heap. Stack overflow happens when recursive calls keep adding function frames until the fixed-size stack is full."
   },
   {
@@ -293,6 +329,7 @@
     "sectionTitle": "Runtime Memory Layout, Garbage Collection, and Stack Unwinding",
     "sourceNumber": "2",
     "question": "How can stack and heap coexist in shared memory space?",
+    "prompt": "How can stack and heap coexist in shared memory space?",
     "answer": "They grow in different directions: stack grows downward and heap grows upward. Virtual memory helps prevent immediate overwriting. Collision occurs only when the process’s memory space is exhausted."
   },
   {
@@ -301,6 +338,7 @@
     "sectionTitle": "Runtime Memory Layout, Garbage Collection, and Stack Unwinding",
     "sourceNumber": "3",
     "question": "What parameter passing technique uses the OUT keyword, and name one language that uses it.",
+    "prompt": "What parameter passing technique uses the OUT keyword, and name one language that uses it.",
     "answer": "Pass by result. Languages include C# and Ada."
   },
   {
@@ -309,6 +347,7 @@
     "sectionTitle": "Runtime Memory Layout, Garbage Collection, and Stack Unwinding",
     "sourceNumber": "4",
     "question": "Why is C++ difficult in the context of garbage collection, and why is garbage collection needed?",
+    "prompt": "Why is C++ difficult in the context of garbage collection, and why is garbage collection needed?",
     "answer": "C++ is difficult because memory is often managed manually. The programmer must free unused memory and avoid dangling pointers. Garbage collection automatically reclaims unreachable memory, preventing memory exhaustion and reducing human error."
   },
   {
@@ -317,6 +356,7 @@
     "sectionTitle": "Runtime Memory Layout, Garbage Collection, and Stack Unwinding",
     "sourceNumber": "5",
     "question": "What is stack unwinding?",
+    "prompt": "What is stack unwinding?",
     "answer": "Stack unwinding is the process of removing function call frames from the stack while searching for a matching exception handler or catch block."
   },
   {
@@ -325,6 +365,7 @@
     "sectionTitle": "Python Execution Pipeline and Interpretative Execution",
     "sourceNumber": "1",
     "question": "Describe the execution pipeline of Python and explain each stage.",
+    "prompt": "Describe the execution pipeline of Python and explain each stage.",
     "answer": "Python execution follows: `.py source code → Tokenizer/Parser → AST → Bytecode compiler → CPython VM / .pyc bytecode → Runtime actions`. The source code is parsed into tokens and an AST, compiled into bytecode, and executed by the Python Virtual Machine, which manages variables, function frames, objects, and exceptions."
   },
   {
@@ -333,6 +374,7 @@
     "sectionTitle": "Python Execution Pipeline and Interpretative Execution",
     "sourceNumber": "2",
     "question": "How does Java relate to interpretative execution?",
+    "prompt": "How does Java relate to interpretative execution?",
     "answer": "Java source code is compiled into bytecode, but the bytecode is executed by the JVM rather than directly by the machine. The JVM acts as a runtime engine that loads, verifies, and runs the bytecode."
   },
   {
@@ -341,6 +383,7 @@
     "sectionTitle": "Python Execution Pipeline and Interpretative Execution",
     "sourceNumber": "3",
     "question": "How does Python actually handle your code?",
+    "prompt": "How does Python actually handle your code?",
     "answer": "Python converts `.py` source code into bytecode and sends it to the Python Virtual Machine, which executes instructions and manages variables and memory."
   },
   {
@@ -349,6 +392,7 @@
     "sectionTitle": "Python Execution Pipeline and Interpretative Execution",
     "sourceNumber": "4",
     "question": "What is the big difference between compiling and interpreting?",
+    "prompt": "What is the big difference between compiling and interpreting?",
     "answer": "Compilation translates the whole program before running it. Interpretation translates and runs the program as execution happens."
   },
   {
@@ -357,6 +401,7 @@
     "sectionTitle": "Python Execution Pipeline and Interpretative Execution",
     "sourceNumber": "5",
     "question": "Identify four characteristics of interpretative execution.",
+    "prompt": "Identify four characteristics of interpretative execution.",
     "answer": "Runtime-driven execution, portability, fast edit-run cycle, and runtime error discovery."
   },
   {
@@ -365,6 +410,7 @@
     "sectionTitle": "Interpreters and Compilers",
     "sourceNumber": "1",
     "question": "Discuss interpretive programming languages and their advantages over compiled languages.",
+    "prompt": "Discuss interpretive programming languages and their advantages over compiled languages.",
     "answer": "Interpretive languages execute code through an interpreter without full compilation into machine code. Advantages include rapid development, easier debugging, platform independence, and flexibility through dynamic typing."
   },
   {
@@ -373,6 +419,7 @@
     "sectionTitle": "Interpreters and Compilers",
     "sourceNumber": "2",
     "question": "Explain the interpreter pipeline.",
+    "prompt": "Explain the interpreter pipeline.",
     "answer": "The stages are lexical analysis, parsing/syntax analysis, semantic analysis, intermediate code generation, and execution."
   },
   {
@@ -381,6 +428,7 @@
     "sectionTitle": "Interpreters and Compilers",
     "sourceNumber": "3",
     "question": "Compare interpreters and compilers by execution process, error detection, and performance.",
+    "prompt": "Compare interpreters and compilers by execution process, error detection, and performance.",
     "answer": "Interpreters execute line by line at runtime and detect errors during execution. Compilers translate the whole program before execution and detect many errors before running. Interpreted programs are usually slower; compiled programs are usually faster."
   },
   {
@@ -389,6 +437,7 @@
     "sectionTitle": "Interpreters and Compilers",
     "sourceNumber": "4",
     "question": "How do modern interpreted languages improve performance?",
+    "prompt": "How do modern interpreted languages improve performance?",
     "answer": "Python uses bytecode and a VM. JavaScript engines use JIT compilation to compile frequently used code into optimized machine code during runtime."
   },
   {
@@ -397,6 +446,7 @@
     "sectionTitle": "Interpreters and Compilers",
     "sourceNumber": "5",
     "question": "Give real-world applications of interpreted languages.",
+    "prompt": "Give real-world applications of interpreted languages.",
     "answer": "PHP handles server-side web requests, JavaScript adds browser interactivity, Bash automates system tasks, and Python is used in data science and machine learning."
   },
   {
@@ -405,6 +455,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "1a",
     "question": "Distinguish between a lexeme, token, and pattern with examples.",
+    "prompt": "Distinguish between a lexeme, token, and pattern with examples.",
     "answer": "A lexeme is the raw substring, such as `count`. A token is a structured unit such as `<IDENTIFIER, 'count', line=4, col=9>`. A pattern is a rule such as `[a-zA-Z_][a-zA-Z0-9_]*`."
   },
   {
@@ -413,6 +464,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "1b",
     "question": "What three pieces of information does a token carry, and why is position tracking important?",
+    "prompt": "What three pieces of information does a token carry, and why is position tracking important?",
     "answer": "A token carries lexeme, token type, and location. Position tracking helps the compiler report exact error locations and supports symbol table use for scope and semantic checks."
   },
   {
@@ -421,6 +473,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "1c",
     "question": "What is the Symbol Table? State two compilation phases where it is referenced and two examples of information it stores.",
+    "prompt": "What is the Symbol Table? State two compilation phases where it is referenced and two examples of information it stores.",
     "answer": "The Symbol Table stores information about declared identifiers. It is referenced during lexical analysis and semantic analysis. It stores names and types, such as `count` and `int`."
   },
   {
@@ -429,6 +482,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "2a",
     "question": "Define a Finite Automaton.",
+    "prompt": "Define a Finite Automaton.",
     "answer": "A Finite Automaton is an abstract machine that recognizes whether a string belongs to a regular language by moving through a finite set of states based on input symbols."
   },
   {
@@ -437,6 +491,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "2b",
     "question": "Explain DFA vs NFA. Which is used directly in lexer implementation and why?",
+    "prompt": "Explain DFA vs NFA. Which is used directly in lexer implementation and why?",
     "answer": "A DFA has exactly one transition for each state-symbol pair. An NFA may have zero, one, or many transitions. DFA is used directly in lexers because it is deterministic and fast, requiring no backtracking."
   },
   {
@@ -445,6 +500,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "3a",
     "question": "Describe the Scanner as distinct from the Lexer.",
+    "prompt": "Describe the Scanner as distinct from the Lexer.",
     "answer": "The Scanner takes raw source code, removes whitespace/comments, and produces lexemes with positions. The Lexer takes lexemes, classifies them using patterns, and produces tokens."
   },
   {
@@ -453,6 +509,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "3d",
     "question": "Explain the Maximal Munch Rule using `<=`.",
+    "prompt": "Explain the Maximal Munch Rule using `<=`.",
     "answer": "The Maximal Munch Rule chooses the longest possible token. For `<=`, the lexer returns one less-than-or-equal token instead of two separate `<` and `=` tokens."
   },
   {
@@ -461,6 +518,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "4a",
     "question": "List five token types and regexes.",
+    "prompt": "List five token types and regexes.",
     "answer": "Keyword/Identifier: `[a-zA-Z_][a-zA-Z0-9_]*`; Integer Literal: `[0-9]+`; Float Literal: `[0-9]+(\\.[0-9]+)?`; Separator: `[;{}()\\[\\],]`; Operator: `[+\\-*/=!<>&|^%]` with lookahead for compound operators."
   },
   {
@@ -469,6 +527,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "4b",
     "question": "How does the DFA distinguish KEYWORD and IDENTIFIER if they share a regex?",
+    "prompt": "How does the DFA distinguish KEYWORD and IDENTIFIER if they share a regex?",
     "answer": "The DFA first validates the lexeme using the shared identifier pattern. After the lexeme is accepted, it checks whether it is in the reserved keyword list. If yes, it returns KEYWORD; otherwise, IDENTIFIER."
   },
   {
@@ -477,6 +536,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "4c",
     "question": "List three parser error recovery techniques.",
+    "prompt": "List three parser error recovery techniques.",
     "answer": "Panic mode recovery discards tokens until a synchronizing token is found. Error productions add grammar rules for common mistakes. Local/global correction attempts to insert, delete, or substitute tokens to repair the input."
   },
   {
@@ -485,6 +545,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "5a",
     "question": "Define parsing and its objective. How does it differ from lexical analysis theoretically?",
+    "prompt": "Define parsing and its objective. How does it differ from lexical analysis theoretically?",
     "answer": "Parsing checks whether a token sequence follows grammar rules and builds a parse tree or AST. Lexical analysis uses regular grammars and finite automata; parsing uses context-free grammars and pushdown automata."
   },
   {
@@ -493,6 +554,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "5b",
     "question": "Trace a derivation of `int main() { int count = 1; }`.",
+    "prompt": "Trace a derivation of `int main() { int count = 1; }`.",
     "answer": "```text\nprogram\n⇒ function_def\n⇒ KEYWORD IDENTIFIER ( ) block\n⇒ KEYWORD IDENTIFIER ( ) { variable_decl* }\n⇒ KEYWORD IDENTIFIER ( ) { variable_decl }\n⇒ KEYWORD IDENTIFIER ( ) { KEYWORD IDENTIFIER = literal ; }\n⇒ int main ( ) { int count = 1 ; }\n```"
   },
   {
@@ -501,6 +563,7 @@
     "sectionTitle": "Lexical Analysis, Tokens, DFA/NFA, Scanner/Lexer, Parsing, and AST",
     "sourceNumber": "5c",
     "question": "Distinguish between a Parse Tree and an AST.",
+    "prompt": "Distinguish between a Parse Tree and an AST.",
     "answer": "A Parse Tree shows the full derivation, including intermediate grammar nodes and punctuation. An AST keeps only semantically important nodes and omits grammar scaffolding, parentheses, commas, semicolons, and braces."
   },
   {
@@ -509,6 +572,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "1a",
     "question": "What is Functional Programming?",
+    "prompt": "What is Functional Programming?",
     "answer": "Functional Programming is a declarative paradigm where programs are built by applying and composing functions. It treats computation as mathematical function evaluation and avoids changing state or mutable data."
   },
   {
@@ -517,6 +581,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "1b",
     "question": "Explain four foundational concepts of Functional Programming.",
+    "prompt": "Explain four foundational concepts of Functional Programming.",
     "answer": "Pure functions return the same output for the same input and have no side effects. Immutability means values cannot be changed after creation. First-class and higher-order functions mean functions can be stored, passed, and returned. Referential transparency means expressions can be replaced by their values without changing behaviour."
   },
   {
@@ -525,6 +590,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "2a",
     "question": "List three advantages and three disadvantages of Functional Programming.",
+    "prompt": "List three advantages and three disadvantages of Functional Programming.",
     "answer": "Advantages: fewer bugs through immutability, easier testing/debugging, and natural concurrency. Disadvantages: steeper learning curve, performance overhead from immutability, and difficulty modelling stateful problems."
   },
   {
@@ -533,6 +599,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "2b",
     "question": "Explain immutability, lazy evaluation, eager evaluation, and statelessness.",
+    "prompt": "Explain immutability, lazy evaluation, eager evaluation, and statelessness.",
     "answer": "Immutability means values cannot be modified after assignment. Lazy evaluation delays computation until needed. Eager evaluation computes expressions immediately. Statelessness means output depends only on input, with no hidden changing internal state."
   },
   {
@@ -541,6 +608,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "3a",
     "question": "List pure functional languages and multi-paradigm languages with functional traits.",
+    "prompt": "List pure functional languages and multi-paradigm languages with functional traits.",
     "answer": "Pure functional languages: Haskell, Erlang, Scheme. Multi-paradigm languages: JavaScript, Python, Scala."
   },
   {
@@ -549,6 +617,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "3b",
     "question": "Why does Functional Programming use recursion instead of loops?",
+    "prompt": "Why does Functional Programming use recursion instead of loops?",
     "answer": "Loops usually rely on mutable counters or state, while recursion repeats work by passing updated values as function arguments, preserving immutability."
   },
   {
@@ -557,6 +626,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "4a",
     "question": "Why is Functional Programming good for concurrency and parallelism?",
+    "prompt": "Why is Functional Programming good for concurrency and parallelism?",
     "answer": "Because immutable data and statelessness remove shared mutable state. Multiple threads can read the same data without race conditions, reducing the need for locks."
   },
   {
@@ -565,6 +635,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "4b",
     "question": "Give a historical background of Functional Programming.",
+    "prompt": "Give a historical background of Functional Programming.",
     "answer": "FP is rooted in Lambda Calculus by Alonzo Church in the 1930s. LISP was developed by John McCarthy in the late 1950s. Scheme appeared in 1975. Erlang was developed by Ericsson in 1986. Haskell was standardized in 1990. Modern languages like Scala and Clojure brought functional ideas to mainstream platforms."
   },
   {
@@ -573,6 +644,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "5a",
     "question": "Differentiate imperative and declarative programming.",
+    "prompt": "Differentiate imperative and declarative programming.",
     "answer": "Imperative programming describes how to do a task step by step and modifies state. Declarative programming describes what result is desired without specifying exact steps."
   },
   {
@@ -581,6 +653,7 @@
     "sectionTitle": "Functional Programming",
     "sourceNumber": "5b",
     "question": "Which paradigm is Functional Programming under and why?",
+    "prompt": "Which paradigm is Functional Programming under and why?",
     "answer": "Functional Programming is under declarative programming because it focuses on what to compute using functions and expressions rather than explicit control flow and state modification."
   },
   {
@@ -589,6 +662,7 @@
     "sectionTitle": "Logic Programming",
     "sourceNumber": "1",
     "question": "Explain declarative vs imperative programming using logic programming.",
+    "prompt": "Explain declarative vs imperative programming using logic programming.",
     "answer": "Logic programming is declarative because the programmer provides facts and rules, and the computer derives the solution. Imperative programming requires explicit step-by-step instructions, loops, and conditions."
   },
   {
@@ -597,6 +671,7 @@
     "sectionTitle": "Logic Programming",
     "sourceNumber": "2",
     "question": "Describe unification and backtracking in logic programming.",
+    "prompt": "Describe unification and backtracking in logic programming.",
     "answer": "Unification matches logical statements by binding variables to values. Backtracking tries alternative paths when a chosen path fails, returning to a previous decision point until a valid solution is found."
   },
   {
@@ -605,6 +680,7 @@
     "sectionTitle": "Logic Programming",
     "sourceNumber": "3",
     "question": "Compare unification in Prolog and Mercury.",
+    "prompt": "Compare unification in Prolog and Mercury.",
     "answer": "Prolog uses dynamic runtime unification and can flexibly match variables, constants, and nested structures. Mercury uses statically typed unification with compile-time checks for types, modes, and determinism."
   },
   {
@@ -613,6 +689,7 @@
     "sectionTitle": "Logic Programming",
     "sourceNumber": "4",
     "question": "Compare non-determinism in Prolog and ASP.",
+    "prompt": "Compare non-determinism in Prolog and ASP.",
     "answer": "Prolog uses implicit non-determinism and backtracking to find alternative answers. ASP computes multiple stable models or answer sets, where each model is a logically consistent possible world."
   },
   {
@@ -621,6 +698,7 @@
     "sectionTitle": "Logic Programming",
     "sourceNumber": "5",
     "question": "How can Python and Java support logic programming concepts?",
+    "prompt": "How can Python and Java support logic programming concepts?",
     "answer": "Python can use rule engines, constraint solvers, and libraries like `pyDatalog`. Java can use expert system frameworks and rule engines."
   },
   {
@@ -629,6 +707,7 @@
     "sectionTitle": "Object-Oriented Programming",
     "sourceNumber": "1",
     "question": "Name and describe the four pillars of OOP.",
+    "prompt": "Name and describe the four pillars of OOP.",
     "answer": "Encapsulation hides data and exposes only necessary access. Inheritance lets child classes acquire parent properties and behaviours. Polymorphism allows one interface to take many forms. Abstraction hides implementation details and shows only essential features."
   },
   {
@@ -637,6 +716,7 @@
     "sectionTitle": "Object-Oriented Programming",
     "sourceNumber": "2",
     "question": "How does Java implement encapsulation?",
+    "prompt": "How does Java implement encapsulation?",
     "answer": "Java declares attributes as `private` and provides public getters and setters. Getters read values; setters modify values with possible validation."
   },
   {
@@ -645,6 +725,7 @@
     "sectionTitle": "Object-Oriented Programming",
     "sourceNumber": "3",
     "question": "How does Java achieve multiple inheritance of behaviour?",
+    "prompt": "How does Java achieve multiple inheritance of behaviour?",
     "answer": "Java uses interfaces. A class can implement multiple interfaces, and since Java 8, interfaces can include default methods."
   },
   {
@@ -653,6 +734,7 @@
     "sectionTitle": "Object-Oriented Programming",
     "sourceNumber": "4",
     "question": "Why is balance private in a Java banking system?",
+    "prompt": "Why is balance private in a Java banking system?",
     "answer": "It prevents external code from directly modifying the account balance. Changes must go through controlled methods like `deposit()` and `withdraw()`."
   },
   {
@@ -661,6 +743,7 @@
     "sectionTitle": "Object-Oriented Programming",
     "sourceNumber": "5",
     "question": "Which language is recommended for enterprise banking and real-time game engines?",
+    "prompt": "Which language is recommended for enterprise banking and real-time game engines?",
     "answer": "Java is recommended for enterprise banking because of strong static typing and platform independence. C++ is recommended for real-time game engines because of high performance and direct memory control."
   },
   {
@@ -669,6 +752,7 @@
     "sectionTitle": "More OOP Questions",
     "sourceNumber": "1",
     "question": "Explain two OOP concepts with examples.",
+    "prompt": "Explain two OOP concepts with examples.",
     "answer": "A class is a blueprint for objects. Example: `class Car { int speed; String vendor; }`. An object is an instance of a class. Example: `Car toyota = new Car();`."
   },
   {
@@ -677,6 +761,7 @@
     "sectionTitle": "More OOP Questions",
     "sourceNumber": "2",
     "question": "List and explain types of inheritance.",
+    "prompt": "List and explain types of inheritance.",
     "answer": "Single inheritance: one child inherits from one parent. Multilevel inheritance: a class inherits from a derived class. Hierarchical inheritance: one parent has multiple child classes. Multiple inheritance: a child inherits from more than one parent."
   },
   {
@@ -685,6 +770,7 @@
     "sectionTitle": "More OOP Questions",
     "sourceNumber": "3",
     "question": "Show classes, objects, inheritance, and encapsulation in Java.",
+    "prompt": "Show classes, objects, inheritance, and encapsulation in Java.",
     "answer": "```java\nclass Car {\n    private int speed;\n    String vendor;\n\n    public void move() {\n        // movement logic\n    }\n\n    public void changeSpeed(int newSpeed) {\n        speed = newSpeed;\n    }\n}\n\nclass Bus extends Car {\n    // Bus inherits from Car\n}\n\nCar toyota = new Car();\n```"
   },
   {
@@ -693,6 +779,7 @@
     "sectionTitle": "More OOP Questions",
     "sourceNumber": "4",
     "question": "Differentiate method overriding and overloading.",
+    "prompt": "Differentiate method overriding and overloading.",
     "answer": "Overloading is compile-time polymorphism where methods in the same class have the same name but different parameter lists. Overriding is runtime polymorphism where a subclass provides its own implementation of a parent method with the same signature."
   },
   {
@@ -701,6 +788,7 @@
     "sectionTitle": "More OOP Questions",
     "sourceNumber": "5",
     "question": "Explain account hierarchy in a banking system using inheritance.",
+    "prompt": "Explain account hierarchy in a banking system using inheritance.",
     "answer": "A general `Account` class can contain common attributes like account type and balance. Specific classes such as `SavingsAccount` and `CheckingAccount` inherit from it and add specialized behaviour. This reduces repetition and creates a flexible hierarchy."
   },
   {
@@ -709,6 +797,7 @@
     "sectionTitle": "Control Flow, Data Flow, Exceptions, Globals, and Live Variable Analysis",
     "sourceNumber": "1",
     "question": "Differentiate control flow and data flow, and explain how they interact.",
+    "prompt": "Differentiate control flow and data flow, and explain how they interact.",
     "answer": "Control flow determines the order of statement execution. Data flow describes how values move and change. In `if (x > 0) y = x + 1;`, control flow decides whether assignment happens, while data flow shows how `x` influences `y`."
   },
   {
@@ -717,6 +806,7 @@
     "sectionTitle": "Control Flow, Data Flow, Exceptions, Globals, and Live Variable Analysis",
     "sourceNumber": "2",
     "question": "Compare iterative and recursive approaches by data flow and memory usage.",
+    "prompt": "Compare iterative and recursive approaches by data flow and memory usage.",
     "answer": "Iteration uses loops and variables to maintain state. Recursion uses function calls, with each call handling part of the problem. Recursion is expressive but uses more memory due to function call frames; iteration is usually more memory-efficient."
   },
   {
@@ -725,6 +815,7 @@
     "sectionTitle": "Control Flow, Data Flow, Exceptions, Globals, and Live Variable Analysis",
     "sourceNumber": "3",
     "question": "Analyze exception handling as a control structure.",
+    "prompt": "Analyze exception handling as a control structure.",
     "answer": "Exception handling manages runtime errors using `try`, `catch`, and `finally`. It introduces non-linear control flow, transfers execution to error-handling blocks, and separates normal logic from error logic. It improves robustness but complicates flow analysis."
   },
   {
@@ -733,6 +824,7 @@
     "sectionTitle": "Control Flow, Data Flow, Exceptions, Globals, and Live Variable Analysis",
     "sourceNumber": "4",
     "question": "Why is using only global variables problematic using data flow principles?",
+    "prompt": "Why is using only global variables problematic using data flow principles?",
     "answer": "Global variables create implicit data flow and hard-to-track dependencies. Any function can modify them, causing difficult debugging, unexpected side effects, and poor modularity. Explicit data flow through parameters is better."
   },
   {
@@ -741,6 +833,7 @@
     "sectionTitle": "Control Flow, Data Flow, Exceptions, Globals, and Live Variable Analysis",
     "sourceNumber": "5",
     "question": "A variable is declared and assigned but never used. How does the compiler identify this and why is removing it safe?",
+    "prompt": "A variable is declared and assigned but never used. How does the compiler identify this and why is removing it safe?",
     "answer": "The compiler uses live variable analysis. A variable is live if its value is used later. If it is never used, it is dead, and removing it is safe because it has no effect on program output."
   }
 ]
