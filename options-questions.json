@@ -1,0 +1,402 @@
+[
+  {
+    "id": "q001",
+    "section": "BVAS Anchor",
+    "question": "In the BVAS analogy, what does scanning your fingerprint represent?",
+    "options": ["Input to an algorithm", "Output of an algorithm", "A loop invariant", "A hash collision"],
+    "answerIndex": 0,
+    "explanation": "The guide maps BVAS fingerprint scanning to algorithm input."
+  },
+  {
+    "id": "q002",
+    "section": "BVAS Anchor",
+    "question": "What does IPOS-AT stand for in algorithm design considerations?",
+    "options": ["Input, Process, Output, Structure, Accuracy, Time", "Initialize, Process, Operate, Sort, Analyse, Terminate", "Input, Program, Output, Syntax, Algorithm, Testing", "Index, Pointer, Object, Stack, Array, Tree"],
+    "answerIndex": 0,
+    "explanation": "IPOS-AT means Input, Process, Output, Structure, Accuracy, and Time."
+  },
+  {
+    "id": "q003",
+    "section": "Algorithm Basics",
+    "question": "Which sentence matches the guide's formal definition of an algorithm?",
+    "options": ["An organised computational procedure that takes some values as input and produces some values as output.", "A computer program that always uses recursion to solve a problem.", "A storage format for arranging values in memory.", "A mathematical shortcut that removes the need for data structures."],
+    "answerIndex": 0,
+    "explanation": "The guide asks you to memorize the organised computational procedure definition."
+  },
+  {
+    "id": "q004",
+    "section": "Algorithm Basics",
+    "question": "What does the mnemonic FDIEO represent?",
+    "options": ["Finiteness, Definiteness, Input, Effectiveness, Output", "Function, Data, Iteration, Execution, Object", "Fast, Direct, Indexed, Efficient, Ordered", "Finite, Dynamic, Internal, External, Optional"],
+    "answerIndex": 0,
+    "explanation": "FDIEO lists the five required features of an algorithm."
+  },
+  {
+    "id": "q005",
+    "section": "Algorithm Basics",
+    "question": "Which feature means an algorithm must eventually stop?",
+    "options": ["Finiteness", "Definiteness", "Effectiveness", "Correctness"],
+    "answerIndex": 0,
+    "explanation": "Finiteness means the steps cannot continue forever."
+  },
+  {
+    "id": "q006",
+    "section": "Algorithm Basics",
+    "question": "Which feature means every step must be clear and unambiguous?",
+    "options": ["Definiteness", "Input", "Output", "Scalability"],
+    "answerIndex": 0,
+    "explanation": "Definiteness means each instruction is precise."
+  },
+  {
+    "id": "q007",
+    "section": "Algorithm Basics",
+    "question": "The guide calls correctness a sixth unofficial feature. What does it mean?",
+    "options": ["The output must actually be the right answer.", "The algorithm must have exactly six steps.", "The algorithm must run in constant time.", "The algorithm must use a tree."],
+    "answerIndex": 0,
+    "explanation": "Correctness means the result is valid for the problem."
+  },
+  {
+    "id": "q008",
+    "section": "Categories",
+    "question": "What are the three big ways algorithms are categorized in the guide?",
+    "options": ["Style, Application, Complexity", "Syntax, Arrays, Code", "Stacks, Algorithms, Classes", "Speed, Accuracy, Cost"],
+    "answerIndex": 0,
+    "explanation": "The memory trick SAC stands for Style, Application, Complexity."
+  },
+  {
+    "id": "q009",
+    "section": "Categories",
+    "question": "Which algorithm style tries every possibility?",
+    "options": ["Brute force", "Greedy", "Dynamic programming", "Heuristic"],
+    "answerIndex": 0,
+    "explanation": "Brute force is the try-everything approach."
+  },
+  {
+    "id": "q010",
+    "section": "Categories",
+    "question": "Which algorithm style grabs the best-looking option at each step?",
+    "options": ["Greedy", "Backtracking", "Merge sort", "Pattern matching"],
+    "answerIndex": 0,
+    "explanation": "Greedy algorithms choose the locally best option now."
+  },
+  {
+    "id": "q011",
+    "section": "Categories",
+    "question": "Which category asks WHAT problem an algorithm solves?",
+    "options": ["Application", "Style", "Complexity", "Finiteness"],
+    "answerIndex": 0,
+    "explanation": "Application covers sorting, searching, graph problems, string matching, and similar problem types."
+  },
+  {
+    "id": "q012",
+    "section": "Categories",
+    "question": "In the guide, P problems are described as what?",
+    "options": ["Easy polynomial-time problems that are doable", "Problems with no input", "Problems that require only stacks", "Problems that can never be solved"],
+    "answerIndex": 0,
+    "explanation": "P is presented as polynomial time and doable."
+  },
+  {
+    "id": "q013",
+    "section": "Algorithm Flow",
+    "question": "What is the universal picture of an algorithm?",
+    "options": ["Input goes through an algorithm and becomes output.", "Output creates input without processing.", "A graph always becomes a tree.", "A loop invariant replaces the input."],
+    "answerIndex": 0,
+    "explanation": "The guide summarizes every algorithm as INPUT -> ALGORITHM -> OUTPUT."
+  },
+  {
+    "id": "q014",
+    "section": "Complexity",
+    "question": "What does DASL stand for?",
+    "options": ["Data, Algorithmic, Structural, Logical", "Divide, Analyse, Sort, Loop", "Dynamic, Array, Stack, List", "Data, Accuracy, Speed, Latency"],
+    "answerIndex": 0,
+    "explanation": "DASL names the four sources of program complexity."
+  },
+  {
+    "id": "q015",
+    "section": "Complexity",
+    "question": "According to the guide, what should you usually fix first when a program is slow?",
+    "options": ["Algorithmic complexity", "The monitor size", "Variable names", "The color of the UI"],
+    "answerIndex": 0,
+    "explanation": "The guide says a better algorithm beats a faster computer."
+  },
+  {
+    "id": "q016",
+    "section": "Complexity",
+    "question": "In T(n) ≈ Cop × C(n), what does C(n) represent?",
+    "options": ["The number of basic operations as a function of n", "The color of the output", "The number of files in the project", "The final sorted list"],
+    "answerIndex": 0,
+    "explanation": "C(n) is the operation count, and that is what complexity analysis cares about."
+  },
+  {
+    "id": "q017",
+    "section": "Complexity",
+    "question": "Why do we usually ignore Cop in complexity analysis?",
+    "options": ["It is a constant that does not depend on input size.", "It is always zero.", "It only applies to graphs.", "It is the same as output."],
+    "answerIndex": 0,
+    "explanation": "Constants are ignored when focusing on growth with n."
+  },
+  {
+    "id": "q018",
+    "section": "Complexity",
+    "question": "What does BAW stand for in complexity analysis?",
+    "options": ["Best, Average, Worst", "Binary, Array, While", "Brute, Algorithm, Work", "Base, Answer, Write"],
+    "answerIndex": 0,
+    "explanation": "BAW is the memory trick for best, average, and worst cases."
+  },
+  {
+    "id": "q019",
+    "section": "Complexity",
+    "question": "For sequential search, what is the worst case?",
+    "options": ["The target is last or missing, requiring n comparisons.", "The target is first, requiring one comparison.", "The list is already sorted.", "The algorithm uses a hash table."],
+    "answerIndex": 0,
+    "explanation": "Worst case sequential search checks every item."
+  },
+  {
+    "id": "q020",
+    "section": "Complexity",
+    "question": "Why do we often report worst-case complexity?",
+    "options": ["It gives a guarantee that the algorithm will never be slower than that bound.", "It always makes the algorithm look fastest.", "It removes the need for input.", "It proves every algorithm is correct."],
+    "answerIndex": 0,
+    "explanation": "Worst case is a guarantee about the maximum work."
+  },
+  {
+    "id": "q021",
+    "section": "Loops",
+    "question": "What does IMT stand for in loop invariants?",
+    "options": ["Initialization, Maintenance, Termination", "Input, Memory, Time", "Iteration, Merge, Test", "Index, Match, Traverse"],
+    "answerIndex": 0,
+    "explanation": "IMT is the guide's three-part loop-invariant proof structure."
+  },
+  {
+    "id": "q022",
+    "section": "Loops",
+    "question": "In a loop invariant proof, what does maintenance show?",
+    "options": ["If the invariant is true before one round, it remains true before the next round.", "The algorithm never accepts input.", "The loop starts with a sorted array of length n.", "The output is hidden until the end."],
+    "answerIndex": 0,
+    "explanation": "Maintenance is the inductive step."
+  },
+  {
+    "id": "q023",
+    "section": "Loops",
+    "question": "For insertion sort, what is the loop invariant in the guide?",
+    "options": ["Before checking card j, all cards before it are already sorted.", "Every card after j is already sorted.", "The largest card is always first.", "No card ever moves."],
+    "answerIndex": 0,
+    "explanation": "Insertion sort maintains a sorted prefix before the current card."
+  },
+  {
+    "id": "q024",
+    "section": "Data Structures",
+    "question": "Which data structure is Last In, First Out?",
+    "options": ["Stack", "Queue", "Hash table", "Graph"],
+    "answerIndex": 0,
+    "explanation": "A stack behaves like plates: the last one placed on top is removed first."
+  },
+  {
+    "id": "q025",
+    "section": "Data Structures",
+    "question": "Which data structure is First In, First Out?",
+    "options": ["Queue", "Stack", "Binary search tree", "Hash table"],
+    "answerIndex": 0,
+    "explanation": "A queue is like a bank line: first come, first served."
+  },
+  {
+    "id": "q026",
+    "section": "Data Structures",
+    "question": "What operation adds an item to a stack?",
+    "options": ["Push", "Dequeue", "Hash", "Merge"],
+    "answerIndex": 0,
+    "explanation": "Push puts a new item on top of a stack."
+  },
+  {
+    "id": "q027",
+    "section": "Data Structures",
+    "question": "What operation removes an item from the front of a queue?",
+    "options": ["Dequeue", "Push", "Pop", "Partition"],
+    "answerIndex": 0,
+    "explanation": "Dequeue removes the front item from a queue."
+  },
+  {
+    "id": "q028",
+    "section": "Data Structures",
+    "question": "What does a linked-list node contain?",
+    "options": ["Data and a pointer to the next node", "Only a sorted array", "Only a hash function", "A root and exactly two children"],
+    "answerIndex": 0,
+    "explanation": "The guide describes a linked list as nodes containing data plus a next pointer."
+  },
+  {
+    "id": "q029",
+    "section": "Data Structures",
+    "question": "In a Binary Search Tree, where do smaller values go?",
+    "options": ["Left children", "Right children", "Only the root", "A queue at the back"],
+    "answerIndex": 0,
+    "explanation": "BST order is smaller values left, bigger values right."
+  },
+  {
+    "id": "q030",
+    "section": "Data Structures",
+    "question": "What is a hash collision?",
+    "options": ["Two items land in the same hash-table slot.", "A tree has no root.", "A queue removes the last item first.", "A loop runs once."],
+    "answerIndex": 0,
+    "explanation": "A collision happens when two keys map to the same hole or slot."
+  },
+  {
+    "id": "q031",
+    "section": "Data Structures",
+    "question": "Which graph search uses a queue and explores level by level?",
+    "options": ["BFS", "DFS", "KMP", "Rabin-Karp"],
+    "answerIndex": 0,
+    "explanation": "Breadth-First Search uses a queue and visits by levels."
+  },
+  {
+    "id": "q032",
+    "section": "Data Structures",
+    "question": "Which graph search goes deep first and backtracks using a stack?",
+    "options": ["DFS", "BFS", "Binary search", "Selection sort"],
+    "answerIndex": 0,
+    "explanation": "Depth-First Search follows a path deeply before backtracking."
+  },
+  {
+    "id": "q033",
+    "section": "Asymptotic Notation",
+    "question": "What does Big-O describe in the guide?",
+    "options": ["An upper bound, or at most this fast", "A lower bound only", "An exact bound only", "A sorted data structure"],
+    "answerIndex": 0,
+    "explanation": "Big-O is the upper bound."
+  },
+  {
+    "id": "q034",
+    "section": "Asymptotic Notation",
+    "question": "What does Big-Omega describe?",
+    "options": ["A lower bound, or at least this fast", "An upper bound only", "A strict upper bound", "The number of nodes in a graph"],
+    "answerIndex": 0,
+    "explanation": "Omega is the lower bound."
+  },
+  {
+    "id": "q035",
+    "section": "Asymptotic Notation",
+    "question": "What does Theta describe?",
+    "options": ["An exact bound, both upper and lower", "A strict lower bound only", "A hash-table lookup", "A queue operation"],
+    "answerIndex": 0,
+    "explanation": "Theta means the growth is tightly bounded above and below."
+  },
+  {
+    "id": "q036",
+    "section": "Asymptotic Notation",
+    "question": "Which order is faster-growing for large n?",
+    "options": ["n^2 grows faster than n log n.", "log n grows faster than n^3.", "1 grows faster than 2^n.", "n grows faster than n!."],
+    "answerIndex": 0,
+    "explanation": "The growth ladder places n log n before n^2."
+  },
+  {
+    "id": "q037",
+    "section": "Asymptotic Notation",
+    "question": "Which list matches the guide's growth ladder from better to worse?",
+    "options": ["1, log n, n, n log n, n^2, n^3, 2^n, n!", "n!, 2^n, n^3, n^2, n log n, n, log n, 1", "n, 1, n!, log n, n^2, 2^n, n log n, n^3", "log n, 1, n^2, n, 2^n, n log n, n!, n^3"],
+    "answerIndex": 0,
+    "explanation": "The guide gives C-L-L-NL-S-C-E-F as the growth order."
+  },
+  {
+    "id": "q038",
+    "section": "Sorting",
+    "question": "Why do we sort data?",
+    "options": ["To group identical items, match across files, and search faster", "To remove all duplicates automatically", "To make all algorithms recursive", "To avoid needing input and output"],
+    "answerIndex": 0,
+    "explanation": "GMS means Group, Match, Search faster."
+  },
+  {
+    "id": "q039",
+    "section": "Sorting",
+    "question": "Which sort is like sorting cards in your hand?",
+    "options": ["Insertion sort", "Bubble sort", "Merge sort", "Heap sort"],
+    "answerIndex": 0,
+    "explanation": "Insertion sort inserts each new item into the already-sorted part."
+  },
+  {
+    "id": "q040",
+    "section": "Sorting",
+    "question": "What is insertion sort's best-case time when the list is already sorted?",
+    "options": ["Theta(n)", "Theta(n^2)", "Theta(log n)", "Theta(n!)"],
+    "answerIndex": 0,
+    "explanation": "Insertion sort is linear in the best case."
+  },
+  {
+    "id": "q041",
+    "section": "Sorting",
+    "question": "Which sort compares adjacent items and swaps them so big values move right?",
+    "options": ["Bubble sort", "Selection sort", "Binary search", "KMP"],
+    "answerIndex": 0,
+    "explanation": "Bubble sort repeatedly swaps adjacent out-of-order values."
+  },
+  {
+    "id": "q042",
+    "section": "Sorting",
+    "question": "Which sort finds the smallest item and swaps it into the next position?",
+    "options": ["Selection sort", "Merge sort", "Insertion sort", "External merge sort"],
+    "answerIndex": 0,
+    "explanation": "Selection sort repeatedly selects the smallest remaining item."
+  },
+  {
+    "id": "q043",
+    "section": "Sorting",
+    "question": "What are the three steps of merge sort's divide-and-conquer approach?",
+    "options": ["Divide, Conquer, Combine", "Push, Pop, Peek", "Best, Average, Worst", "Input, Output, Terminate"],
+    "answerIndex": 0,
+    "explanation": "D-C-C is Divide, Conquer, Combine."
+  },
+  {
+    "id": "q044",
+    "section": "Sorting",
+    "question": "What is merge sort's best, average, and worst-case time?",
+    "options": ["Theta(n log n)", "Theta(n^2)", "Theta(log n)", "Theta(1)"],
+    "answerIndex": 0,
+    "explanation": "The guide says merge sort is always Theta(n log n)."
+  },
+  {
+    "id": "q045",
+    "section": "Sorting",
+    "question": "Which sort does the guide recommend for a small list or nearly sorted list?",
+    "options": ["Insertion sort", "Bubble sort", "External merge sort", "Boyer-Moore"],
+    "answerIndex": 0,
+    "explanation": "Insertion sort has low overhead and a linear best case."
+  },
+  {
+    "id": "q046",
+    "section": "Searching",
+    "question": "Which search works on any list, sorted or unsorted?",
+    "options": ["Sequential search", "Binary search", "Dijkstra's algorithm", "Merge sort"],
+    "answerIndex": 0,
+    "explanation": "Sequential search checks items one by one and does not need sorting."
+  },
+  {
+    "id": "q047",
+    "section": "Searching",
+    "question": "What does binary search require?",
+    "options": ["Sorted data", "A linked list only", "A hash collision", "At least two outputs"],
+    "answerIndex": 0,
+    "explanation": "Binary search repeatedly halves a sorted search space."
+  },
+  {
+    "id": "q048",
+    "section": "Searching",
+    "question": "For n = 1,000,000, the guide says binary search needs about how many steps?",
+    "options": ["20", "1,000,000", "1 trillion", "n!"],
+    "answerIndex": 0,
+    "explanation": "The guide contrasts sequential search's 1,000,000 steps with binary search's about 20."
+  },
+  {
+    "id": "q049",
+    "section": "Algorithm Strategies",
+    "question": "What two requirements does dynamic programming need?",
+    "options": ["Optimal substructure and overlapping subproblems", "A queue and a stack", "A sorted input and a binary tree", "A hash function and no output"],
+    "answerIndex": 0,
+    "explanation": "DP works when optimal solutions reuse overlapping subproblem answers."
+  },
+  {
+    "id": "q050",
+    "section": "Writing Algorithms",
+    "question": "What does USC-PIVOT help you remember?",
+    "options": ["The 7 steps for writing an algorithm", "The five asymptotic notations", "The steps for graph traversal only", "The exact code for merge sort"],
+    "answerIndex": 0,
+    "explanation": "USC-PIVOT is the guide's recipe for writing algorithms in exams."
+  }
+]

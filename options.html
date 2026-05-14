@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COS 431 Options Quiz</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero" aria-labelledby="pageTitle">
+        <div>
+          <p class="course">COS 431 Algorithms & Data Structures</p>
+          <h1 id="pageTitle">50-question options quiz</h1>
+          <p class="intro">Practice the PDF guide as fast multiple-choice rounds with instant explanations and saved progress.</p>
+        </div>
+        <div class="score-card" aria-live="polite">
+          <span id="scoreText">0 / 50</span>
+          <small id="accuracyText">0% accuracy</small>
+        </div>
+      </section>
+
+      <section class="quiz-shell">
+        <aside class="side-panel" aria-label="Question navigation">
+          <div class="panel-top">
+            <div>
+              <p class="label">Progress</p>
+              <h2 id="answeredText">0 answered</h2>
+            </div>
+            <button id="resetButton" class="ghost-button" type="button">Reset</button>
+          </div>
+          <div class="meter" aria-hidden="true"><span id="meterFill"></span></div>
+          <div id="questionGrid" class="question-grid"></div>
+        </aside>
+
+        <section class="question-panel" aria-live="polite">
+          <div class="question-meta">
+            <span id="sectionText">Section</span>
+            <span id="numberText">Question 1 of 50</span>
+          </div>
+
+          <h2 id="questionText">Loading question...</h2>
+          <div id="optionsList" class="options-list"></div>
+
+          <div id="feedbackBox" class="feedback" hidden>
+            <p id="feedbackTitle"></p>
+            <span id="feedbackText"></span>
+          </div>
+
+          <div class="actions">
+            <button id="prevButton" class="secondary-button" type="button">Previous</button>
+            <button id="nextButton" class="primary-button" type="button">Next</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
